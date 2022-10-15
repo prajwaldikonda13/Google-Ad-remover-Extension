@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Google Ads Remover",
+    "description": "This extension removes all the ads on the currently opened page",
+    "version": "1.0",
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_popup": "popup.html",
+    "default_title": "Google Ads Remover"
+  },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js":      ["scripts/content.js","scripts/jquery.min.js"]
+    }],
+    "permissions": [
+        "activeTab"
+    ]
+}
+
